@@ -1,0 +1,3 @@
+/build/docker-compose.override.yml
+/build/cert/ca.*
+/build/cert/a25dev.*
