@@ -1,0 +1,9 @@
+# This is the central configuration for all tools we use/execute. It is parsed inside
+# the Taskfile, too. See $CONFIG_application_web_path for example.
+project:
+  name: Docker Traefik container
+  key: traefik
+paths:
+modules:
+  docker:
+    docker_compose_config_overrides: localhost

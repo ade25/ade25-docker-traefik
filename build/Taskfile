@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+task:install() {
+    docker:install
+}
+
+task:update() {
+    docker:update
+}
+
+task:run() {
+    docker:docker-compose up "$@"
+}
+
+task:halt() {
+    docker:docker-compose down "$@"
+}
+
+task:shell() {
+    docker:container_run traefik /bin/sh --login
+}
+
+task:docker-compose() {
+    docker:docker-compose "$@"
+}

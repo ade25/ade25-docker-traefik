@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  traefik:
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8422:8422"
+networks:
+  gateway:
+
