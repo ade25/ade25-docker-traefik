@@ -36,8 +36,8 @@ defaultEntryPoints = ["http", "https"]
     address = ":443"
     [entryPoints.https.tls]
       [[entryPoints.https.tls.certificates]]
-      CertFile = "cert/t23dev.crt"
-      KeyFile = "cert/t23dev.key"
+      CertFile = "cert/a25dev.crt"
+      KeyFile = "cert/a25dev.key"
 
 # Traefik logs
 # Enabled by default and log to stdout
@@ -117,7 +117,7 @@ address = ":8422"
 # Optional
 # Default: ""
 #
-domain = "t23dev"
+domain = "a25dev"
 
 # Expose containers by default in traefik
 #
