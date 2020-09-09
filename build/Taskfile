@@ -23,3 +23,8 @@ task:shell() {
 task:docker-compose() {
     docker:docker-compose "$@"
 }
+
+task:halt:others() {
+    docker stop $(docker ps -a | grep -v "traefik" | grep -v "CONTAINER" | awk "{print \$1}")
+    docker rm $(docker ps -a | grep -v "traefik" | grep -v "CONTAINER" | awk "{print \$1}")
+}

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   traefik:
@@ -10,6 +10,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./cert:/cert
       - ./traefik.toml:/traefik.toml
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8422
 
 networks:
   gateway:

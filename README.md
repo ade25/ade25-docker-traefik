@@ -40,7 +40,7 @@ In order to use the integrated TSL/SSL connection you need to generate a local
 self signed cert by using the provided script:
 
 ```bash
-cd build/
+cd build/cert/
 ./create.sh
 ```
 
