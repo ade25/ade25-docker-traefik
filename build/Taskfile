@@ -15,7 +15,10 @@ task:run() {
 task:halt() {
     docker:docker-compose down "$@"
 }
-
+task:halt:all() {
+    docker stop $(docker ps -a | grep -v "traefik" | grep -v "CONTAINER" | awk "{print \$1}")
+    docker rm $(docker ps -a | grep -v "traefik" | grep -v "CONTAINER" | awk "{print \$1}")
+}
 task:shell() {
     docker:container_run traefik /bin/sh --login
 }
