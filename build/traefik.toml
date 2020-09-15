@@ -12,7 +12,7 @@
   [providers.docker]
     watch = true
     exposedByDefault = false
-    defaultRule = "Host(`{{ index .Labels \"com.docker.compose.service\" | normalize }}.{{ index .Labels \"com.docker.compose.project\" | normalize }}.ade25dev`)"
+    defaultRule = "Host(`{{ index .Labels \"com.docker.compose.service\" | normalize }}.{{ index .Labels \"com.docker.compose.project\" | normalize }}.a25dev`)"
     network = "traefik_gateway"
 
 [api]

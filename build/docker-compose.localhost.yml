@@ -1,11 +1,11 @@
-version: '3'
+version: '3.7'
 
 services:
   traefik:
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8422"
+      - "8080:8080"
 networks:
   gateway:
 

@@ -13,7 +13,16 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 8080:8422
+      - 8080:8080
+    labels:
+      - traefik.enable=true
+      - traefik.backend=traefik
+      - traefik.docker.network=traefik_gateway
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}_traefik.rule=Host(`traefik.a25dev`)
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}_traefik_HTTPS.rule=Host(`traefik.a25dev`)
+      - traefik.http.routers.${COMPOSE_PROJECT_NAME}_traefik_HTTPS.tls
+      - traefik.http.services.${COMPOSE_PROJECT_NAME}_traefik.loadbalancer.server.port=8080
+  
 
 networks:
   gateway:
